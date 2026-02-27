@@ -1,4 +1,4 @@
-## Notes
+## Notes - Release v1.0.0
 
 # How I worked through this
 1. Created a basic app that responds to a health check endpoint
@@ -6,7 +6,6 @@
 3. Set up pipenv to also run the app with a dev command
 4. Created a Dockerfile to build the app into a container
 5. Create a simple endpoint that returns the xml data from the middleware xml-api
-
 
 
 ## Testing the app
