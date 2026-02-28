@@ -32,5 +32,15 @@ docker run --rm -p 8000:8000 middle-api:local
 ```
 curl http://0.0.0.0:8000/health
 curl http://0.0.0.0:8000/xml/1
-curl http://0.0.0.0:8000/xml/1
+curl http://0.0.0.0:8000/xml/2
+
+# Output
+# curl http://0.0.0.0:8000/xml/1
+#<?xml version="1.0" encoding="UTF-8"?>
+#<Data>
+#	<id>1</id>
+#	<name>MWNZ</name>
+#	<description>..is awesome</description>
+#</Data>
+
 ```
