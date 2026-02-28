@@ -44,3 +44,27 @@ curl http://0.0.0.0:8000/xml/2
 #</Data>
 
 ```
+
+## Notes - Release v2.0.0
+
+# How I worked through this
+1. Investigate how to read the OpenAPI spec from the middleware xml-api and understand the structure of the URL request and the response needed
+2. Workout what needs to be returned as part of the JSON response and how to use Python to simplify this
+3. Investigate using xmltodict module to convert the XML response into a Python dictionary
+4. Update the app to return the JSON response with the relevant data from the XML response
+
+## Testing the app
+Testing the app is the same as before, but now we need to use a new url and is provided with a new response structure. The endpoints to test are:
+```
+curl http://0.0.0.0:8000/health
+{"ok":true}
+
+curl http://0.0.0.0:8000/v1/companies/1
+{"id":1,"name":"MWNZ","description":"..is awesome"}
+
+curl http://0.0.0.0:8000/v1/companies/2
+{"id":2,"name":"Other","description":"....is not"}
+
+curl http://0.0.0.0:8000/v1/companies/99
+{"error":"not_found","error_description":"Not found"}
+```
