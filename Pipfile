@@ -8,6 +8,7 @@ fastapi = "*"
 uvicorn = "*"
 lxml = "*"
 httpx = "*"
+xmltodict = "*"
 
 [dev-packages]
 
